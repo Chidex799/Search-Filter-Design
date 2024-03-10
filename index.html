@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search & Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="containter">
+        <h1>Car Rental Search and Filter</h1>
+
+        <div class="grid">
+            <div class="pickup-location">
+                <label for="">Pickup location</label>
+                <br>
+                <input type="text" name="" id="pickup-location" placeholder="enter your location">
+            </div>
+    
+            <div class="pickup-date">
+                <label for="">Pickup Date</label>
+                <br>
+                <input type="date" name="datetime" id="pickup-date-time" onchange="filterItems()">
+            </div>
+            <div class="pickup-date">
+                <label  for="">Dropoff Date</label>
+                <br>
+                <input type="date" name="datetime" id="dropoff-date-time" onchange="filterItems()">
+            </div>
+            <div class="pickup-date">
+                <label for="">Residence</label>
+                <br>
+                <input type="text" name="datetime" id="residence" oninput="filterItems()" placeholder="Nigeria">
+            </div>
+            <button>Search</button>
+        </div>
+
+        <ul id="item-list"  onclick="selectResidence(event)">
+            <li class="item" data-location="location1" data-pickup-time="2024-03-09T12:00" data-dropoff-time="2024-03-10T12:00">Abuja</li>
+            <li class="item" data-location="location2" data-pickup-time="2024-03-10T14:00" data-dropoff-time="2024-03-11T14:00">Lagos</li>
+            <li class="item" data-location="location1" data-pickup-time="2024-03-11T16:00" data-dropoff-time="2024-03-12T16:00">Porthacut</li>
+            <li class="item" data-location="location1" data-pickup-time="2024-03-11T16:00" data-dropoff-time="2024-03-12T16:00">Ogun</li>
+            <li class="item" data-location="location2" data-pickup-time="2024-03-11T16:00" data-dropoff-time="2024-03-12T16:00">Bayelsa</li>
+            <li class="item" data-location="location2" data-pickup-time="2024-03-11T16:00" data-dropoff-time="2024-03-12T16:00">Enugu</li>
+            <li class="item" data-location="location1" data-pickup-time="2024-03-11T16:00" data-dropoff-time="2024-03-12T16:00">Imo</li>
+            <li class="item" data-location="location1" data-pickup-time="2024-03-11T16:00" data-dropoff-time="2024-03-12T16:00">Anambra</li>
+          </ul>
+    
+    
+    </div>
+<script src="script.js"></script>
+</body>
+</html> 
